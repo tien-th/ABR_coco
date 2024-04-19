@@ -10,7 +10,7 @@ shopt -s expand_aliases
 # INCREMENTAL STEPS
 step=1
 
-task=15-5
+task=70-10
 name=ABR_LR001_BS4_ALPHA1_BETA1_GAMMA5
 exp -t ${task} -n ${name} -s ${step} --feat ard -gamma 5.0 --inc --dist_type id -alpha 1.0 -beta 1.0 -mb 2000 -mt mean -cvd 0
 #name=Finetune

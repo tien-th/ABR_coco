@@ -52,11 +52,11 @@ import warnings
 warnings.filterwarnings("ignore", category=UserWarning)
 
 
-import debugpy 
-debugpy.listen(5678)
-print('Waiting for debugger attach')
-debugpy.wait_for_client()
-print('Atteched')
+# import debugpy 
+# debugpy.listen(5678)
+# print('Waiting for debugger attach')
+# debugpy.wait_for_client()
+# print('Atteched')
 
 
 def do_train(model_source, model_target, data_loader, optimizer, scheduler, checkpointer_target,
@@ -399,8 +399,8 @@ def main():
     )
     parser.add_argument(
         "-ds", "--dataset",
-        # default="coco", type=str
-        default="voc", type=str
+        default="coco", type=str
+        # default="voc", type=str
     )
 
     args = parser.parse_args()
@@ -431,8 +431,8 @@ def main():
     random.seed(random_seed)
     print(random.randint(1, 1000))
 
-    # base = 'output_coco'
-    base = 'output'
+    base = 'output_coco'
+    # base = 'output'
     # Load source model
     cfg_source = cfg.clone()
     cfg_source.merge_from_file(target_model_config_file)
